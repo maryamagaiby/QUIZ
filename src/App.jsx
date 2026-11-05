@@ -6,7 +6,7 @@ import Results from './pages/Results';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/QUIZ">
         <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/quiz" element={<Quiz />} />
