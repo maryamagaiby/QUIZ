@@ -2,6 +2,7 @@
   "name": "quiz",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://maryamagaiby.github.io/QUIZ",
   "type": "module",
   "scripts": {
     "dev": "vite",
