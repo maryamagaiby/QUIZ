@@ -7,14 +7,7 @@ function Results() {
  
 // to store the data passed during navigation
   const { score, total } = location.state;
-
-  function getGrade() {
-    if (score >= 9) return 'Excellent!';
-    if (score >= 7) return 'Very good!';
-    if (score >= 5) return 'Good!';
-    if (score >= 3) return 'Keep practising!';
-    return 'Try Again!';
-  }
+  
 
   return (
     <div className="container text-center mt-5">
@@ -28,7 +21,7 @@ function Results() {
         </h2>
 
         <h3 className="text-primary mt-3"  class="fw-bold">
-          {getGrade()}
+          
         </h3>
 
         <p className="mt-3" class="text-dark">
