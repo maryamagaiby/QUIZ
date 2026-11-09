@@ -2,7 +2,7 @@ function Card({ question, answers, selected, onSelect }) {
 
 
     return (
-        <div  className="card" >
+        <div  className="card mb-2" >
             <div className="card-body">
             
             <h5 className="card-title">{question}</h5>
