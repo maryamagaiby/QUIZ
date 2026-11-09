@@ -97,7 +97,7 @@ export default function Quiz() {
 
       <div className="text-center mt-4">
         <button
-          className="btn btn-success btn-lg"
+          className="btn btn-success btn-lg m-3"
           onClick={submitQuiz}
         >
           Submit Quiz
