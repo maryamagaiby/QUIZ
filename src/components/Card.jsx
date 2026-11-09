@@ -4,7 +4,6 @@ function Card({ question, answers, selected, onSelect }) {
     return (
         <div  className="card mb-2" >
             <div className="card-body">
-            
             <h5 className="card-title">{question}</h5>
             {answers.map((answer, index) => (
                 <div className="form-check" key={index}>
@@ -16,8 +15,6 @@ function Card({ question, answers, selected, onSelect }) {
                         value={answer}
                         checked={selected=== answer}
                         onChange={()=> onSelect(answer)}
-                        
-                        
                     />
 
                     <label
@@ -25,10 +22,9 @@ function Card({ question, answers, selected, onSelect }) {
                             {answer}
                     </label>
                     </div>
-            ))} 
+            ))}
         </div>
         </div>
-        
     );
 }
 

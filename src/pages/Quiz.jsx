@@ -8,8 +8,6 @@ export default function Quiz() {
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
-    
-  
     const navigate = useNavigate();
     useEffect(() => {
       async function loadQuestions() {
@@ -17,11 +15,7 @@ export default function Quiz() {
           const response = await fetch(
             "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
           );
-  
           const data = await response.json();
-        
-  
-         
           const formatted = data.results.map((q) => ({
             question: q.question,
             correct: q.correct_answer,
@@ -43,18 +37,13 @@ export default function Quiz() {
       UserSelection[questionIndex] = answer;
       setSelectedAnswers(UserSelection);
     }
-    
-    
-    
     function submitQuiz() {
       let score = 0;
-  
       questions.forEach((q, index) => {
         if (selectedAnswers[index] === q.correct) {
           score++;
         }
       });
-  
       navigate("/results", {
         state: {
           score: score,
@@ -62,8 +51,6 @@ export default function Quiz() {
         }
       });
     }
-  
-    
     if (loading) {
       return (
         <div className="container text-center mt-5">
@@ -71,7 +58,6 @@ export default function Quiz() {
         </div>
       );
     }
-  
     if (error) {
       return (
         <div className="container text-center mt-5">
@@ -79,8 +65,6 @@ export default function Quiz() {
         </div>
       );
     }
-  
- 
   return (
     <div className="container mt-5 text-start">
       {questions.map((q, index) => {
